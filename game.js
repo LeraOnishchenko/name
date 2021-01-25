@@ -672,13 +672,13 @@ Asteroid = function () {
   this.collision = function (other) {
     SFX.explosion();
     if (other.name == "bullet") Game.score += 120 / this.scale;
-    this.scale /= 3;
+    this.scale /= 2;
     if (this.scale > 0.5) {
       // break into fragments
-      for (var i = 0; i < 3; i++) {
+      for (var i = 0; i < 2; i++) {
         var roid = $.extend(true, {}, this);
-        roid.vel.x = Math.random() * 6 - 3;
-        roid.vel.y = Math.random() * 6 - 3;
+        roid.vel.x = Math.random() * 6 - 2;
+        roid.vel.y = Math.random() * 6 - 2;
         if (Math.random() > 0.5) {
           roid.points.reverse();
         }
