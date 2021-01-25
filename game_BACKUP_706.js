@@ -455,10 +455,6 @@ Ship = function () {
     if (KEY_STATUS.space) {
       if (this.delayBeforeBullet <= 0) {
 <<<<<<< HEAD
-this.delayBeforeBullet = 10;
-=======
-<<<<<<< HEAD
->>>>>>> master
         for (var i = 0; i < this.bullets.length; i++) {
           if (!this.bullets[i].visible) {
             SFX.laser();
@@ -729,12 +725,9 @@ Asteroid = function () {
   this.collision = function (other) {
     SFX.explosion();
     if (other.name == "bullet") Game.score += 120 / this.scale;
-    this.scale /= 2;
+    this.scale /= 3;
     if (this.scale > 0.5) {
-<<<<<<< HEAD
-      // break into fragments
       this.breakIntoFragments();
->>>>>>> master
     }
     Game.explosionAt(other.x, other.y);
     this.die();
